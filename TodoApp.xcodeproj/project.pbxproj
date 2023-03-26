@@ -15,6 +15,7 @@
 		3B849D2029D0047D00F30A67 /* TodoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D1E29D0047D00F30A67 /* TodoApp.xcdatamodeld */; };
 		3B849D2729D007AA00F30A67 /* CategoryImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D2629D007AA00F30A67 /* CategoryImages.swift */; };
 		3B849D2929D0186B00F30A67 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D2829D0186A00F30A67 /* CheckBox.swift */; };
+		3B849D2C29D0309000F30A67 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D2B29D0309000F30A67 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		3B849D1F29D0047D00F30A67 /* TodoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoApp.xcdatamodel; sourceTree = "<group>"; };
 		3B849D2629D007AA00F30A67 /* CategoryImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImages.swift; sourceTree = "<group>"; };
 		3B849D2829D0186A00F30A67 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		3B849D2B29D0309000F30A67 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		3B849D1229D0047800F30A67 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				3B849D2A29D0305200F30A67 /* Extension */,
 				3B849D1329D0047800F30A67 /* TodoAppApp.swift */,
 				3B849D1529D0047800F30A67 /* ContentView.swift */,
 				3B849D2629D007AA00F30A67 /* CategoryImages.swift */,
@@ -77,6 +80,14 @@
 				3B849D1A29D0047D00F30A67 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B849D2A29D0305200F30A67 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3B849D2B29D0309000F30A67 /* Color+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B849D2729D007AA00F30A67 /* CategoryImages.swift in Sources */,
+				3B849D2C29D0309000F30A67 /* Color+Extension.swift in Sources */,
 				3B849D1D29D0047D00F30A67 /* Persistence.swift in Sources */,
 				3B849D2929D0186B00F30A67 /* CheckBox.swift in Sources */,
 				3B849D1629D0047800F30A67 /* ContentView.swift in Sources */,

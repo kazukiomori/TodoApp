@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct UserView: View {
+    
+    // MARK: Property
+    let image: Image
+    let userName: String
+    
+    // MARK: Body
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text("こんにちは")
                     .foregroundColor(Color.tTitle)
                     .font(.footnote)
-                Text("kazuki")
+                Text("\(userName)")
                     .foregroundColor(Color.tTitle)
                     .font(.title)
             }
             Spacer()
-            Image("profile")
+            self.image
                 .resizable()
                 .frame(width: 60, height: 60)
                 .clipShape(Circle())
@@ -29,8 +35,9 @@ struct UserView: View {
     }
 }
 
+// MARK: Preview
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView()
+        UserView(image: Image("profile"), userName: "userName")
     }
 }

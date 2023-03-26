@@ -17,6 +17,7 @@
 		3B849D2929D0186B00F30A67 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D2829D0186A00F30A67 /* CheckBox.swift */; };
 		3B849D2C29D0309000F30A67 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D2B29D0309000F30A67 /* Color+Extension.swift */; };
 		3B849D2F29D031D900F30A67 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D2E29D031D900F30A67 /* UserView.swift */; };
+		3B849D3129D039A700F30A67 /* TodoEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D3029D039A700F30A67 /* TodoEntity+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3B849D2829D0186A00F30A67 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		3B849D2B29D0309000F30A67 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		3B849D2E29D031D900F30A67 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		3B849D3029D039A700F30A67 /* TodoEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoEntity+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3B849D2B29D0309000F30A67 /* Color+Extension.swift */,
+				3B849D3029D039A700F30A67 /* TodoEntity+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				3B849D2929D0186B00F30A67 /* CheckBox.swift in Sources */,
 				3B849D1629D0047800F30A67 /* ContentView.swift in Sources */,
 				3B849D1429D0047800F30A67 /* TodoAppApp.swift in Sources */,
+				3B849D3129D039A700F30A67 /* TodoEntity+Extension.swift in Sources */,
 				3B849D2029D0047D00F30A67 /* TodoApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

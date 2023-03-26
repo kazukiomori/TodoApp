@@ -27,7 +27,10 @@ struct QuickNewTask: View {
     // MARK: Body
     var body: some View {
         HStack {
-            TextField("新しいタスク", text: $newTask)
+            TextField("新しいタスク", text: $newTask){
+                self.addNewTask()
+            }
+                .textFieldStyle(RoundedBorderTextFieldStyle())
             Button("追加") {
                 self.addNewTask()
             }

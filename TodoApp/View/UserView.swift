@@ -17,7 +17,7 @@ struct UserView: View {
             Image("profile")
                 .resizable()
                 .frame(width: 60, height: 60)
-                
+                .clipShape(Circle())
         }
     }
 }

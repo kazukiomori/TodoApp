@@ -19,6 +19,7 @@
 		3B849D2F29D031D900F30A67 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D2E29D031D900F30A67 /* UserView.swift */; };
 		3B849D3129D039A700F30A67 /* TodoEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D3029D039A700F30A67 /* TodoEntity+Extension.swift */; };
 		3B849D3329D03A6400F30A67 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D3229D03A6400F30A67 /* CategoryView.swift */; };
+		3B849D3529D093CD00F30A67 /* QuickNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D3429D093CD00F30A67 /* QuickNewTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3B849D2E29D031D900F30A67 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		3B849D3029D039A700F30A67 /* TodoEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoEntity+Extension.swift"; sourceTree = "<group>"; };
 		3B849D3229D03A6400F30A67 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		3B849D3429D093CD00F30A67 /* QuickNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNewTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				3B849D2829D0186A00F30A67 /* CheckBox.swift */,
 				3B849D2E29D031D900F30A67 /* UserView.swift */,
 				3B849D3229D03A6400F30A67 /* CategoryView.swift */,
+				3B849D3429D093CD00F30A67 /* QuickNewTask.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B849D2729D007AA00F30A67 /* CategoryImages.swift in Sources */,
+				3B849D3529D093CD00F30A67 /* QuickNewTask.swift in Sources */,
 				3B849D2C29D0309000F30A67 /* Color+Extension.swift in Sources */,
 				3B849D1D29D0047D00F30A67 /* Persistence.swift in Sources */,
 				3B849D2F29D031D900F30A67 /* UserView.swift in Sources */,

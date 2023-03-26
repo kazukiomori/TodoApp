@@ -14,8 +14,9 @@ struct CategoryView: View {
     
     // MARK: Body
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Image(systemName: category.image())
+                .font(.largeTitle)
             Text(category.toString())
             Text("・\(numberOfTasks)タスク")
             Button(action: {}) {
@@ -23,6 +24,11 @@ struct CategoryView: View {
             }
             Spacer()
         }
+        .padding()
+        .frame(maxWidth: .infinity, minHeight: 150)
+        .foregroundColor(.white)
+        .background(category.color())
+        .cornerRadius(20)
     }
 }
 

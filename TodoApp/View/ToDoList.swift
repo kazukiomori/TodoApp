@@ -21,19 +21,41 @@ struct ToDoList: View {
     
     // MARK: Body
     var body: some View {
-        List{
-            ForEach(todoList) { todo in
-                Text(todo.task ?? "no title")
+        VStack {
+            List{
+                ForEach(todoList) { todo in
+                    Text(todo.task ?? "no title")
+                }
             }
+            QuickNewTask(category: category)
+                .padding()
         }
     }
 }
 // MARK: Preview
 struct ToDoList_Previews: PreviewProvider {
     
-    static let persistenceController = PersistenceController.shared
+    static let container = PersistenceController.shared.container
+    static let context = container.viewContext
+    
     static var previews: some View {
-        ToDoList(category: .ImpUrg_1st)
-            .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        // テストデータの全削除
+        let request = NSBatchDeleteRequest(
+            fetchRequest: NSFetchRequest(entityName: "TodoEntity"))
+        try! container.persistentStoreCoordinator.execute(request,
+                                                          with: context)
+
+        // データを追加
+        TodoEntity.create(in: context,
+                          category: .ImpUrg_1st, task: "炎上プロジェクト")
+        TodoEntity.create(in: context,
+                          category: .ImpNUrg_2nd, task: "自己啓発")
+        TodoEntity.create(in: context,
+                          category: .NImpUrg_3rd, task: "意味のない会議")
+        TodoEntity.create(in: context,
+                          category: .NImpNUrg_4th, task: "暇つぶし")
+
+        return ToDoList(category: .ImpUrg_1st)
+            .environment(\.managedObjectContext, container.viewContext)
     }
 }

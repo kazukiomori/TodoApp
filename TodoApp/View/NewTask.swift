@@ -12,16 +12,21 @@ struct NewTask: View {
     @State var time: Date = Date()
     var body: some View {
         NavigationView {
-            VStack {
-                TextField("タスクを入力", text: $task)
-                DatePicker(selection: $time, label: {Text("日時")})
-                    .datePickerStyle(.wheel)
-                Button(action: {}) {
-                    HStack {
-                        Image(systemName: "minus.circle.fill")
-                        Text("キャンセル")
-                    }.foregroundColor(.red)
-
+            Form {
+                Section(header: Text("タスク")) {
+                    TextField("タスクを入力", text: $task)
+                }
+                Section(header: Toggle(isOn: .constant(true)) {Text("時間を指定する")}) {
+                    DatePicker(selection: $time, label: {Text("日時")})
+                        .datePickerStyle(.wheel)
+                }
+                Section(header: Text("操作")) {
+                    Button(action: {}) {
+                        HStack {
+                            Image(systemName: "minus.circle.fill")
+                            Text("キャンセル")
+                        }.foregroundColor(.red)
+                    }
                 }
             }.navigationBarTitle("タスクの追加")
         }

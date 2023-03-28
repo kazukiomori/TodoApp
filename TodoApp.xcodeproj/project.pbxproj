@@ -23,6 +23,7 @@
 		3B849D3729D097A100F30A67 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D3629D097A100F30A67 /* ToDoList.swift */; };
 		3BA9618229D1F6F400E55318 /* TodoDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */; };
 		3BA9618429D3461B00E55318 /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618329D3461B00E55318 /* NewTask.swift */; };
+		3BA9618629D360B700E55318 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618529D360B700E55318 /* Binding+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		3B849D3629D097A100F30A67 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRow.swift; sourceTree = "<group>"; };
 		3BA9618329D3461B00E55318 /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
+		3BA9618529D360B700E55318 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3B849D2B29D0309000F30A67 /* Color+Extension.swift */,
 				3B849D3029D039A700F30A67 /* TodoEntity+Extension.swift */,
+				3BA9618529D360B700E55318 /* Binding+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				3B849D3529D093CD00F30A67 /* QuickNewTask.swift in Sources */,
 				3B849D2C29D0309000F30A67 /* Color+Extension.swift in Sources */,
 				3B849D1D29D0047D00F30A67 /* Persistence.swift in Sources */,
+				3BA9618629D360B700E55318 /* Binding+Extension.swift in Sources */,
 				3B849D2F29D031D900F30A67 /* UserView.swift in Sources */,
 				3B849D3329D03A6400F30A67 /* CategoryView.swift in Sources */,
 				3B849D2929D0186B00F30A67 /* CheckBox.swift in Sources */,

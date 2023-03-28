@@ -11,12 +11,18 @@ struct CategoryView: View {
     // MARK: Property
     var category: TodoEntity.Category
     @State var numberOfTasks = 0
+    @State var showList = false
+    @Environment(\.managedObjectContext) var viewContext
     
     // MARK: Body
     var body: some View {
         VStack(alignment: .leading) {
             Image(systemName: category.image())
                 .font(.largeTitle)
+                .sheet(isPresented: $showList) {
+                    ToDoList(category: self.category)
+                        .environment(\.managedObjectContext, self.viewContext)
+                }
             Text(category.toString())
             Text("・\(numberOfTasks)タスク")
             Button(action: {}) {
@@ -29,10 +35,15 @@ struct CategoryView: View {
         .foregroundColor(.white)
         .background(category.color())
         .cornerRadius(20)
+        .onTapGesture {
+            self.showList = true
+        }
     }
 }
 
 struct CategoryView_Previews: PreviewProvider {
+    static let container = PersistenceController.shared.container
+    static let context = container.viewContext
     static var previews: some View {
         VStack {
             CategoryView(category: .ImpUrg_1st,
@@ -43,6 +54,6 @@ struct CategoryView_Previews: PreviewProvider {
                          numberOfTasks: 100)
             CategoryView(category: .NImpNUrg_4th,
                          numberOfTasks: 100)
-        }
+        }.environment(\.managedObjectContext, container.viewContext)
     }
 }

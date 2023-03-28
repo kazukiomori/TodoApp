@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct NewTask: View {
+    @State var task: String = ""
+    @State var time: Date = Date()
     var body: some View {
         NavigationView {
             VStack {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                TextField("タスクを入力", text: $task)
+                DatePicker(selection: $time, label: {Text("日時")})
+                    .datePickerStyle(.wheel)
+                Button(action: {}) {
+                    HStack {
+                        Image(systemName: "minus.circle.fill")
+                        Text("キャンセル")
+                    }.foregroundColor(.red)
+
+                }
             }.navigationBarTitle("タスクの追加")
         }
     }

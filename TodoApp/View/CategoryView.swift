@@ -13,6 +13,7 @@ struct CategoryView: View {
     @State var numberOfTasks = 0
     @State var showList = false
     @Environment(\.managedObjectContext) var viewContext
+    @State var addNewTask = false
     
     // MARK: Body
     var body: some View {
@@ -25,8 +26,13 @@ struct CategoryView: View {
                 }
             Text(category.toString())
             Text("・\(numberOfTasks)タスク")
-            Button(action: {}) {
+            Button(action: {
+                self.addNewTask = true
+            }) {
                 Image(systemName: "plus")
+            }.sheet(isPresented: $addNewTask) {
+                NewTask(category: self.category.rawValue)
+                    .environment(\.managedObjectContext, viewContext)
             }
             Spacer()
         }

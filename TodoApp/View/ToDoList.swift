@@ -25,7 +25,7 @@ struct ToDoList: View {
             List{
                 ForEach(todoList) { todo in
                     if self.category.rawValue == todo.category {
-                        Text(todo.task ?? "no title")
+                        TodoDetailRow(todo: todo, hideIcon: true)
                     }
                 }
             }

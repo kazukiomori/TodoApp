@@ -22,6 +22,7 @@
 		3B849D3529D093CD00F30A67 /* QuickNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D3429D093CD00F30A67 /* QuickNewTask.swift */; };
 		3B849D3729D097A100F30A67 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B849D3629D097A100F30A67 /* ToDoList.swift */; };
 		3BA9618229D1F6F400E55318 /* TodoDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */; };
+		3BA9618429D3461B00E55318 /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618329D3461B00E55318 /* NewTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		3B849D3429D093CD00F30A67 /* QuickNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNewTask.swift; sourceTree = "<group>"; };
 		3B849D3629D097A100F30A67 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRow.swift; sourceTree = "<group>"; };
+		3BA9618329D3461B00E55318 /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3B849D3429D093CD00F30A67 /* QuickNewTask.swift */,
 				3B849D3629D097A100F30A67 /* ToDoList.swift */,
 				3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */,
+				3BA9618329D3461B00E55318 /* NewTask.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				3B849D2929D0186B00F30A67 /* CheckBox.swift in Sources */,
 				3B849D3729D097A100F30A67 /* ToDoList.swift in Sources */,
 				3B849D1629D0047800F30A67 /* ContentView.swift in Sources */,
+				3BA9618429D3461B00E55318 /* NewTask.swift in Sources */,
 				3B849D1429D0047800F30A67 /* TodoAppApp.swift in Sources */,
 				3BA9618229D1F6F400E55318 /* TodoDetailRow.swift in Sources */,
 				3B849D3129D039A700F30A67 /* TodoEntity+Extension.swift in Sources */,

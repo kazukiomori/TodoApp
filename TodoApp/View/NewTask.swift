@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct NewTask: View {
+    
+    // MARK: Property
     @State var task: String = ""
     @State var time: Date? = Date()
+    @State var category: Int16 = TodoEntity.Category.ImpUrg_1st.rawValue
+    var categories: [TodoEntity.Category]
+    = [.ImpUrg_1st, .ImpNUrg_2nd, .NImpUrg_3rd, .NImpNUrg_4th]
+    
+    // MARK: Body
     var body: some View {
         NavigationView {
             Form {
@@ -25,6 +32,14 @@ struct NewTask: View {
                     }
                     
                 }
+                Picker(selection: $category, label: Text("種類")) {
+                    ForEach(categories, id: \.self) { category in
+                        HStack {
+                            CategoryImages(category: category)
+                            Text(category.toString())
+                        }.tag(category.rawValue)
+                    }
+                }.pickerStyle(.navigationLink)
                 Section(header: Text("操作")) {
                     Button(action: {}) {
                         HStack {
@@ -38,6 +53,7 @@ struct NewTask: View {
     }
 }
 
+// MARK: Preview
 struct NewTask_Previews: PreviewProvider {
     static var previews: some View {
         NewTask()

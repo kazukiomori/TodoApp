@@ -18,6 +18,20 @@ struct ToDoList: View {
     var todoList: FetchedResults<TodoEntity>
     
     let category: TodoEntity.Category
+    @Environment(\.managedObjectContext) var viewContext
+    
+    // MARK: Function
+    fileprivate func deleteTodo(at offsets: IndexSet) {
+        for index in offsets {
+            let entity = todoList[index]
+            viewContext.delete(entity)
+        }
+        do {
+            try viewContext.save()
+        } catch {
+            print("Delete error \(offsets)")
+        }
+    }
     
     // MARK: Body
     var body: some View {
@@ -30,7 +44,7 @@ struct ToDoList: View {
                                 TodoDetailRow(todo: todo, hideIcon: true)
                             }
                         }
-                    }
+                    }.onDelete(perform: deleteTodo(at:))
                 }
                 QuickNewTask(category: category)
                     .padding()

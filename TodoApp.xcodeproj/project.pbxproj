@@ -27,6 +27,7 @@
 		3BA9618829D3B6AA00E55318 /* EditTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618729D3B6AA00E55318 /* EditTask.swift */; };
 		3BA9618A29D3BD4900E55318 /* TaskToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618929D3BD4900E55318 /* TaskToday.swift */; };
 		3BA9618C29D3BDDF00E55318 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618B29D3BDDF00E55318 /* Date+Extension.swift */; };
+		3BA9618E29D3C03B00E55318 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618D29D3C03B00E55318 /* RoundedCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		3BA9618729D3B6AA00E55318 /* EditTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTask.swift; sourceTree = "<group>"; };
 		3BA9618929D3BD4900E55318 /* TaskToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskToday.swift; sourceTree = "<group>"; };
 		3BA9618B29D3BDDF00E55318 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		3BA9618D29D3C03B00E55318 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				3BA9618329D3461B00E55318 /* NewTask.swift */,
 				3BA9618729D3B6AA00E55318 /* EditTask.swift */,
 				3BA9618929D3BD4900E55318 /* TaskToday.swift */,
+				3BA9618D29D3C03B00E55318 /* RoundedCorners.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				3B849D1429D0047800F30A67 /* TodoAppApp.swift in Sources */,
 				3BA9618229D1F6F400E55318 /* TodoDetailRow.swift in Sources */,
 				3B849D3129D039A700F30A67 /* TodoEntity+Extension.swift in Sources */,
+				3BA9618E29D3C03B00E55318 /* RoundedCorners.swift in Sources */,
 				3B849D2029D0047D00F30A67 /* TodoApp.xcdatamodeld in Sources */,
 				3BA9618C29D3BDDF00E55318 /* Date+Extension.swift in Sources */,
 			);

@@ -24,6 +24,7 @@
 		3BA9618229D1F6F400E55318 /* TodoDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */; };
 		3BA9618429D3461B00E55318 /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618329D3461B00E55318 /* NewTask.swift */; };
 		3BA9618629D360B700E55318 /* Binding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618529D360B700E55318 /* Binding+Extension.swift */; };
+		3BA9618829D3B6AA00E55318 /* EditTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618729D3B6AA00E55318 /* EditTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRow.swift; sourceTree = "<group>"; };
 		3BA9618329D3461B00E55318 /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
 		3BA9618529D360B700E55318 /* Binding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extension.swift"; sourceTree = "<group>"; };
+		3BA9618729D3B6AA00E55318 /* EditTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				3B849D3629D097A100F30A67 /* ToDoList.swift */,
 				3BA9618129D1F6F400E55318 /* TodoDetailRow.swift */,
 				3BA9618329D3461B00E55318 /* NewTask.swift */,
+				3BA9618729D3B6AA00E55318 /* EditTask.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				3B849D2729D007AA00F30A67 /* CategoryImages.swift in Sources */,
 				3B849D3529D093CD00F30A67 /* QuickNewTask.swift in Sources */,
+				3BA9618829D3B6AA00E55318 /* EditTask.swift in Sources */,
 				3B849D2C29D0309000F30A67 /* Color+Extension.swift in Sources */,
 				3B849D1D29D0047D00F30A67 /* Persistence.swift in Sources */,
 				3BA9618629D360B700E55318 /* Binding+Extension.swift in Sources */,

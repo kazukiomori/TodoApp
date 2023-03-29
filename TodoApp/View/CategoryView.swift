@@ -26,7 +26,7 @@ struct CategoryView: View {
             Image(systemName: category.image())
                 .font(.largeTitle)
                 .sheet(isPresented: $showList, onDismiss: self.update) {
-                    ToDoList(category: self.category)
+                    ToDoList(category: self.category, showList: $showList)
                         .environment(\.managedObjectContext, self.viewContext)
                 }
             Text(category.toString())

@@ -72,6 +72,7 @@ struct EditTask: View {
                 self.presentationMode.wrappedValue.dismiss()
             }){
                 Text("閉じる")})
+            .foregroundColor(.black)
             .actionSheet(isPresented: $showingSheet) {
                 ActionSheet(title: Text("タスクの削除"), message: Text("このタスクを削除します。よろしいですか？"), buttons:[
                     .destructive(Text("削除")) {

@@ -26,7 +26,6 @@ struct TodoDetailRow: View {
             })) {
                 if self.todo.state == TodoEntity.State.done.rawValue {
                     Text(self.todo.task ?? "notitle")
-                        .strikethrough()
                 } else {
                     Text(self.todo.task ?? "notitle")
                 }

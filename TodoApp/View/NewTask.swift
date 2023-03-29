@@ -33,6 +33,7 @@ struct NewTask: View {
             Form {
                 Section(header: Text("タスク").foregroundColor(.secondary)) {
                     TextField("タスクを入力", text: $task)
+                        .foregroundColor(Color.black)
                 }
                 Section(header: Toggle(isOn: Binding(isNotNil: $time, defaultValue: Date())) {Text("時間を指定する").foregroundColor(.secondary)}) {
                     if time != nil {
@@ -72,6 +73,7 @@ struct NewTask: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }){
                     Text("保存")})
+                        .foregroundColor(.blue)
         }
     }
 }

@@ -22,6 +22,8 @@ struct ToDoList: View {
     
     @ObservedObject var keyboard = KeyboardObserver()
     
+    @Binding var showList: Bool
+    
     // MARK: Function
     fileprivate func deleteTodo(at offsets: IndexSet) {
         for index in offsets {
@@ -48,10 +50,10 @@ struct ToDoList: View {
                         }
                     }.onDelete(perform: deleteTodo(at:))
                 }
-                QuickNewTask(category: category)
+                QuickNewTask(category: category, showList: $showList)
                     .padding()
             }.navigationBarTitle(category.toString()).foregroundColor(.black)
-            .navigationBarItems(trailing: EditButton())
+                .navigationBarItems(trailing: EditButton().foregroundColor(.black))
         }.onAppear {
             self.keyboard.startObserve()
             UIApplication.shared.closeKeyboard()
@@ -84,7 +86,7 @@ struct ToDoList_Previews: PreviewProvider {
         TodoEntity.create(in: context,
                           category: .NImpNUrg_4th, task: "暇つぶし")
 
-        return ToDoList(category: .ImpUrg_1st)
+        return ToDoList(category: .ImpUrg_1st, showList: .constant(true))
             .environment(\.managedObjectContext, container.viewContext)
     }
 }

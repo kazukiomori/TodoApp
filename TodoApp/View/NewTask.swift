@@ -65,10 +65,15 @@ struct NewTask: View {
                 }
             }.navigationBarTitle("タスクの追加")
                 .navigationBarItems(trailing: Button(action: {
+                    if task == "" {
+                        messageAlert.shared.showErrorMessage(title: "エラー", body: "タスクが入力されていません")
+                        return
+                    }
                     TodoEntity.create(in: self.viewContext,
                                       category: TodoEntity.Category(rawValue: self.category) ?? .ImpUrg_1st,
                                       task: self.task,
                                       time: self.time)
+                    messageAlert.shared.showSuccessMessage(title: "成功", body: "タスクの保存が完了しました。")
                     self.save()
                     self.presentationMode.wrappedValue.dismiss()
                 }){

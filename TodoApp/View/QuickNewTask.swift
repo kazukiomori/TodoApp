@@ -18,9 +18,14 @@ struct QuickNewTask: View {
     
     // MARK: Function
     fileprivate func addNewTask() {
+        if newTask == "" {
+            messageAlert.shared.showErrorMessage(title: "エラー", body: "タスクが入力されていません")
+            return
+        }
         TodoEntity.create(in: self.viewContext,
                           category: self.category,
                           task: self.newTask)
+        messageAlert.shared.showSuccessMessage(title: "成功", body: "タスクの保存が完了しました。")
         self.newTask = ""
         showList = false
     }

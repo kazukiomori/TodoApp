@@ -28,6 +28,8 @@
 		3BA9618A29D3BD4900E55318 /* TaskToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618929D3BD4900E55318 /* TaskToday.swift */; };
 		3BA9618C29D3BDDF00E55318 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618B29D3BDDF00E55318 /* Date+Extension.swift */; };
 		3BA9618E29D3C03B00E55318 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618D29D3C03B00E55318 /* RoundedCorners.swift */; };
+		3BA9619029D3CBD600E55318 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9618F29D3CBD600E55318 /* KeyboardObserver.swift */; };
+		3BA9619229D3CC5800E55318 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9619129D3CC5800E55318 /* UIApplication+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		3BA9618929D3BD4900E55318 /* TaskToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskToday.swift; sourceTree = "<group>"; };
 		3BA9618B29D3BDDF00E55318 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		3BA9618D29D3C03B00E55318 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		3BA9618F29D3CBD600E55318 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		3BA9619129D3CC5800E55318 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				3B849D3029D039A700F30A67 /* TodoEntity+Extension.swift */,
 				3BA9618529D360B700E55318 /* Binding+Extension.swift */,
 				3BA9618B29D3BDDF00E55318 /* Date+Extension.swift */,
+				3BA9619129D3CC5800E55318 /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				3BA9618729D3B6AA00E55318 /* EditTask.swift */,
 				3BA9618929D3BD4900E55318 /* TaskToday.swift */,
 				3BA9618D29D3C03B00E55318 /* RoundedCorners.swift */,
+				3BA9618F29D3CBD600E55318 /* KeyboardObserver.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,8 +220,10 @@
 				3BA9618A29D3BD4900E55318 /* TaskToday.swift in Sources */,
 				3B849D3329D03A6400F30A67 /* CategoryView.swift in Sources */,
 				3B849D2929D0186B00F30A67 /* CheckBox.swift in Sources */,
+				3BA9619029D3CBD600E55318 /* KeyboardObserver.swift in Sources */,
 				3B849D3729D097A100F30A67 /* ToDoList.swift in Sources */,
 				3B849D1629D0047800F30A67 /* ContentView.swift in Sources */,
+				3BA9619229D3CC5800E55318 /* UIApplication+Extension.swift in Sources */,
 				3BA9618429D3461B00E55318 /* NewTask.swift in Sources */,
 				3B849D1429D0047800F30A67 /* TodoAppApp.swift in Sources */,
 				3BA9618229D1F6F400E55318 /* TodoDetailRow.swift in Sources */,

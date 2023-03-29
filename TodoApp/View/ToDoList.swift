@@ -20,6 +20,8 @@ struct ToDoList: View {
     let category: TodoEntity.Category
     @Environment(\.managedObjectContext) var viewContext
     
+    @ObservedObject var keyboard = KeyboardObserver()
+    
     // MARK: Function
     fileprivate func deleteTodo(at offsets: IndexSet) {
         for index in offsets {
@@ -50,7 +52,13 @@ struct ToDoList: View {
                     .padding()
             }.navigationBarTitle(category.toString()).foregroundColor(.black)
             .navigationBarItems(trailing: EditButton())
-        }
+        }.onAppear {
+            self.keyboard.startObserve()
+            UIApplication.shared.closeKeyboard()
+        }.onDisappear {
+            self.keyboard.stopObserve()
+            UIApplication.shared.closeKeyboard()
+        }.padding(.bottom, keyboard.keyboardHeight)
     }
 }
 // MARK: Preview

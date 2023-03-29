@@ -15,7 +15,6 @@ struct ContentView: View {
             Color.tBackground
                 .frame(height: 0)
                 .edgesIgnoringSafeArea(.top)
-            UserView(image: Image("profile"), userName: "kazuki")
             VStack(spacing: 0) {
                 HStack(spacing: 0) {
                     CategoryView(category: .ImpUrg_1st)

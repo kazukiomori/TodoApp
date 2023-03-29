@@ -21,6 +21,7 @@ struct CategoryView: View {
     }
     // MARK: Body
     var body: some View {
+        
         VStack(alignment: .leading) {
             Image(systemName: category.image())
                 .font(.largeTitle)

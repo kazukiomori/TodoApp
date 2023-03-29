@@ -48,7 +48,8 @@ struct ToDoList: View {
                 }
                 QuickNewTask(category: category)
                     .padding()
-            }
+            }.navigationBarTitle(category.toString()).foregroundColor(.black)
+            .navigationBarItems(trailing: EditButton())
         }
     }
 }

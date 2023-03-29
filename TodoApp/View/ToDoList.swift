@@ -21,16 +21,20 @@ struct ToDoList: View {
     
     // MARK: Body
     var body: some View {
-        VStack {
-            List{
-                ForEach(todoList) { todo in
-                    if self.category.rawValue == todo.category {
-                        TodoDetailRow(todo: todo, hideIcon: true)
+        NavigationView {
+            VStack {
+                List{
+                    ForEach(todoList) { todo in
+                        if self.category.rawValue == todo.category {
+                            NavigationLink(destination: EditTask(todo: todo)) {
+                                TodoDetailRow(todo: todo, hideIcon: true)
+                            }
+                        }
                     }
                 }
+                QuickNewTask(category: category)
+                    .padding()
             }
-            QuickNewTask(category: category)
-                .padding()
         }
     }
 }

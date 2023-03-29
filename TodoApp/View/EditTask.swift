@@ -10,6 +10,7 @@ import SwiftUI
 struct EditTask: View {
     // MARK: Property
     @ObservedObject var todo: TodoEntity
+    @State var showingSheet = false
     var categories: [TodoEntity.Category]
     = [.ImpUrg_1st, .ImpNUrg_2nd, .NImpUrg_3rd, .NImpNUrg_4th]
     @Environment(\.managedObjectContext) var viewContext
@@ -56,7 +57,7 @@ struct EditTask: View {
             }.pickerStyle(.navigationLink)
             Section(header: Text("操作").foregroundColor(.secondary)) {
                 Button(action: {
-                    
+                    self.showingSheet = true
                 }) {
                     HStack {
                         Image(systemName: "minus.circle.fill")
@@ -71,6 +72,15 @@ struct EditTask: View {
                 self.presentationMode.wrappedValue.dismiss()
             }){
                 Text("閉じる")})
+            .actionSheet(isPresented: $showingSheet) {
+                ActionSheet(title: Text("タスクの削除"), message: Text("このタスクを削除します。よろしいですか？"), buttons:[
+                    .destructive(Text("削除")) {
+                        self.delete()
+                        self.presentationMode.wrappedValue.dismiss()
+                    },
+                    .cancel(Text("キャンセル"))
+                ])
+            }
     }
 }
 

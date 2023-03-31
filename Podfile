@@ -7,5 +7,6 @@ target 'TodoApp' do
 
   # Pods for TodoApp
   pod 'SwiftMessages'
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end

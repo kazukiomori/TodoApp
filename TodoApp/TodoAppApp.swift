@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Firebase
-import FirebaseCore
 import FirebaseMessaging
 import UserNotifications
 

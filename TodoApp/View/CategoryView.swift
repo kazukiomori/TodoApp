@@ -30,7 +30,7 @@ struct CategoryView: View {
                         .environment(\.managedObjectContext, self.viewContext)
                 }
             Text(category.toString())
-            Text("・\(numberOfTasks)タスク")
+            Text("\(numberOfTasks)taskConut")
             Button(action: {
                 self.addNewTask = true
             }) {

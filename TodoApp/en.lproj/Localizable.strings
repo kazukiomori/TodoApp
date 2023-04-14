@@ -7,3 +7,6 @@
 */
 // CategoryView
 "%lldtaskConut" = "%lld tasks";
+
+// QuickNewTask
+"error" = "Error";

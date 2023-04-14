@@ -19,7 +19,7 @@ struct QuickNewTask: View {
     // MARK: Function
     fileprivate func addNewTask() {
         if newTask == "" {
-            messageAlert.shared.showErrorMessage(title: "エラー", body: "タスクが入力されていません")
+            messageAlert.shared.showErrorMessage(title: NSLocalizedString("error", comment: ""), body: "タスクが入力されていません")
             return
         }
         TodoEntity.create(in: self.viewContext,

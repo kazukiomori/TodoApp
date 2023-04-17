@@ -19,7 +19,7 @@ struct TaskToday: View {
     // MARK: Body
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("今日のタスク").font(.footnote).bold().padding()
+            Text("today_task").font(.footnote).bold().padding()
             List(todoList) { todo in
                 TodoDetailRow(todo: todo)
             }

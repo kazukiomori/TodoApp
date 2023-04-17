@@ -10,3 +10,37 @@
 
 // QuickNewTask
 "error" = "エラー";
+"noTaskHasBeenEntered" = "タスクが入力されていません";
+"success" = "成功";
+"theTaskHasBeenSaved" = "タスクの保存が完了しました";
+"newTask" = "新しいタスク";
+"add" = "追加";
+
+// TodoEntity
+"importantAndUrgent" = "重要かつ緊急";
+"importantButNotUrgent" = "重要だが緊急ではない";
+"notImportantButUrgent" = "重要でないが緊急";
+"neitherImportantNorUrgent" = "重要でも緊急でもない";
+
+// NewTask
+"task" = "タスク";
+"enter_task" = "タスクを入力";
+"set_time" = "時間を指定する";
+"datetime" = "日時";
+"time_unset" = "時間未設定";
+"type" = "種類";
+"operation" = "操作";
+"cancel" = "キャンセル";
+"addTask" = "タスクの追加";
+"save" = "保存";
+
+// EditTask
+"delete" = "削除";
+"edit_task" = "タスクの編集";
+"close" = "閉じる";
+"delete_task" = "タスクの削除";
+"delete_this_task_are_you_sure" = "このタスクを削除します。よろしいですか？";
+
+
+// TaskToday
+"today_task" = "今日のタスク";

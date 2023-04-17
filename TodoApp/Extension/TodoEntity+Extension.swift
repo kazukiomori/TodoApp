@@ -39,13 +39,13 @@ extension TodoEntity {
         func toString() -> String {
             switch self {
             case .ImpUrg_1st:
-                return "重要かつ緊急"
+                return NSLocalizedString("importantAndUrgent", comment: "")
             case .ImpNUrg_2nd:
-                return "重要だが緊急ではない"
+                return NSLocalizedString("importantButNotUrgent", comment: "")
             case .NImpUrg_3rd:
-                return "重要でないが緊急"
+                return NSLocalizedString("notImportantButUrgent", comment: "")
             case .NImpNUrg_4th:
-                return "重要でも緊急でもない"
+                return NSLocalizedString("neitherImportantNorUrgent", comment: "") 
             }
         }
         func image() -> String {

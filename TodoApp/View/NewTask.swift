@@ -31,20 +31,20 @@ struct NewTask: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("タスク").foregroundColor(.secondary)) {
-                    TextField("タスクを入力", text: $task)
+                Section(header: Text("task").foregroundColor(.secondary)) {
+                    TextField(NSLocalizedString("enter_task", comment: ""), text: $task)
                         .foregroundColor(Color.black)
                 }
-                Section(header: Toggle(isOn: Binding(isNotNil: $time, defaultValue: Date())) {Text("時間を指定する").foregroundColor(.secondary)}) {
+                Section(header: Toggle(isOn: Binding(isNotNil: $time, defaultValue: Date())) {Text("set_time").foregroundColor(.secondary)}) {
                     if time != nil {
-                        DatePicker(selection: Binding($time, Date()), label: {Text("日時")})
+                        DatePicker(selection: Binding($time, Date()), label: {Text("datetime")})
                             .datePickerStyle(.wheel)
                     } else {
-                        Text("時間未設定").foregroundColor(.secondary)
+                        Text("time_unset").foregroundColor(.secondary)
                     }
                     
                 }
-                Picker(selection: $category, label: Text("種類").foregroundColor(.black)) {
+                Picker(selection: $category, label: Text("type").foregroundColor(.black)) {
                     ForEach(categories, id: \.self) { category in
                         HStack {
                             CategoryImages(category: category)
@@ -53,31 +53,31 @@ struct NewTask: View {
                         }.tag(category.rawValue)
                     }
                 }.pickerStyle(.navigationLink)
-                Section(header: Text("操作").foregroundColor(.secondary)) {
+                Section(header: Text("operation").foregroundColor(.secondary)) {
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         HStack {
                             Image(systemName: "minus.circle.fill")
-                            Text("キャンセル")
+                            Text("cancel")
                         }.foregroundColor(.red)
                     }
                 }
-            }.navigationBarTitle("タスクの追加")
+            }.navigationBarTitle(NSLocalizedString("addTask", comment: ""))
                 .navigationBarItems(trailing: Button(action: {
                     if task == "" {
-                        messageAlert.shared.showErrorMessage(title: "エラー", body: "タスクが入力されていません")
+                        messageAlert.shared.showErrorMessage(title: NSLocalizedString("error", comment: ""), body: NSLocalizedString("noTaskHasBeenEntered", comment: ""))
                         return
                     }
                     TodoEntity.create(in: self.viewContext,
                                       category: TodoEntity.Category(rawValue: self.category) ?? .ImpUrg_1st,
                                       task: self.task,
                                       time: self.time)
-                    messageAlert.shared.showSuccessMessage(title: "成功", body: "タスクの保存が完了しました。")
+                    messageAlert.shared.showSuccessMessage(title: NSLocalizedString("success", comment: ""), body: NSLocalizedString("theTaskHasBeenSaved", comment: ""))
                     self.save()
                     self.presentationMode.wrappedValue.dismiss()
                 }){
-                    Text("保存")})
+                    Text("save")})
                         .foregroundColor(.blue)
         }
     }

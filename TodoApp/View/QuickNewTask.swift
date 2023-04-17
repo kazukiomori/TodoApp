@@ -19,13 +19,13 @@ struct QuickNewTask: View {
     // MARK: Function
     fileprivate func addNewTask() {
         if newTask == "" {
-            messageAlert.shared.showErrorMessage(title: NSLocalizedString("error", comment: ""), body: "タスクが入力されていません")
+            messageAlert.shared.showErrorMessage(title: NSLocalizedString("error", comment: ""), body: NSLocalizedString("noTaskHasBeenEntered", comment: ""))
             return
         }
         TodoEntity.create(in: self.viewContext,
                           category: self.category,
                           task: self.newTask)
-        messageAlert.shared.showSuccessMessage(title: "成功", body: "タスクの保存が完了しました。")
+        messageAlert.shared.showSuccessMessage(title: NSLocalizedString("success", comment: ""), body: NSLocalizedString("theTaskHasBeenSaved", comment: ""))
         self.newTask = ""
         showList = false
     }
@@ -38,11 +38,11 @@ struct QuickNewTask: View {
     // MARK: Body
     var body: some View {
         HStack {
-            TextField("新しいタスク", text: $newTask){
+            TextField(NSLocalizedString("newTask", comment: ""), text: $newTask){ 
                 self.addNewTask()
             }
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            Button("追加") {
+            Button(NSLocalizedString("add", comment: "")) { 
                 self.addNewTask()
             }
             .foregroundColor(.black)

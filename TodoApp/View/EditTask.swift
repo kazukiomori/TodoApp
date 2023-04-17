@@ -34,19 +34,19 @@ struct EditTask: View {
     // MARK: Body
     var body: some View {
         Form {
-            Section(header: Text("タスク").foregroundColor(.secondary)) {
-                TextField("タスクを入力", text: Binding($todo.task, "new task" ))
+            Section(header: Text("task").foregroundColor(.secondary)) {
+                TextField(NSLocalizedString("enter_task", comment: ""), text: Binding($todo.task, "new task" ))
             }
-            Section(header: Toggle(isOn: Binding(isNotNil: $todo.time, defaultValue: Date())) {Text("時間を指定する").foregroundColor(.secondary)}) {
+            Section(header: Toggle(isOn: Binding(isNotNil: $todo.time, defaultValue: Date())) {Text("set_time").foregroundColor(.secondary)}) {
                 if todo.time != nil {
-                    DatePicker(selection: Binding($todo.time, Date()), label: {Text("日時")})
+                    DatePicker(selection: Binding($todo.time, Date()), label: {Text("datetime")})
                         .datePickerStyle(.wheel)
                 } else {
-                    Text("時間未設定").foregroundColor(.secondary)
+                    Text("time_unset").foregroundColor(.secondary)
                 }
                 
             }
-            Picker(selection: $todo.category, label: Text("種類").foregroundColor(.black)) {
+            Picker(selection: $todo.category, label: Text("type").foregroundColor(.black)) {
                 ForEach(categories, id: \.self) { category in
                     HStack {
                         CategoryImages(category: category)
@@ -55,31 +55,31 @@ struct EditTask: View {
                     }.tag(category.rawValue)
                 }
             }.pickerStyle(.navigationLink)
-            Section(header: Text("操作").foregroundColor(.secondary)) {
+            Section(header: Text("operation").foregroundColor(.secondary)) {
                 Button(action: {
                     self.showingSheet = true
                 }) {
                     HStack {
                         Image(systemName: "minus.circle.fill")
-                        Text("Delete")
+                        Text("delete")
                     }.foregroundColor(.red)
                 }
             }
-        }.navigationBarTitle("タスクの編集")
+        }.navigationBarTitle(NSLocalizedString("edit_task", comment: ""))
             .navigationBarItems(trailing: Button(action: {
                 
                 self.save()
                 self.presentationMode.wrappedValue.dismiss()
             }){
-                Text("閉じる")})
+                Text("close")})
             .foregroundColor(.black)
             .actionSheet(isPresented: $showingSheet) {
-                ActionSheet(title: Text("タスクの削除"), message: Text("このタスクを削除します。よろしいですか？"), buttons:[
-                    .destructive(Text("削除")) {
+                ActionSheet(title: Text("delete_task"), message: Text("delete_this_task_are_you_sure"), buttons:[
+                    .destructive(Text("delete")) {
                         self.delete()
                         self.presentationMode.wrappedValue.dismiss()
                     },
-                    .cancel(Text("キャンセル"))
+                    .cancel(Text("cancel"))
                 ])
             }
     }

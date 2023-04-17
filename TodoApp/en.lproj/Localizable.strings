@@ -10,3 +10,36 @@
 
 // QuickNewTask
 "error" = "Error";
+"noTaskHasBeenEntered" = "No task has been entered";
+"success" = "Success";
+"theTaskHasBeenSaved" = "The task has been saved";
+"newTask" = "New task";
+"add" = "Add";
+
+// TodoEntity
+"importantAndUrgent" = "Important and Urgent";
+"importantButNotUrgent" = "Important but Not Urgent";
+"notImportantButUrgent" = "Not Important but Urgent";
+"neitherImportantNorUrgent" = "Neither Important nor Urgent";
+
+// NewTask
+"task" = "Task";
+"enter_task" = "Enter Task";
+"set_time" = "Set Time";
+"datetime" = "Date and Time";
+"time_unset" = "Time unset";
+"type" = "Type";
+"operation" = "Operation";
+"cancel" = "Cancel";
+"addTask" = "Add a task";
+"save" = "Save";
+
+// EditTask
+"delete" = "Delete";
+"edit_task" = "Edit the task";
+"close" = "Close";
+"delete_task" = "Delete the task";
+"delete_this_task_are_you_sure" = "Delete this task. Are you sure?";
+
+// TaskToday
+"today_task" = "Today's task";

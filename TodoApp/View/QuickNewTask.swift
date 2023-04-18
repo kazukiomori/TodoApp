@@ -41,7 +41,7 @@ struct QuickNewTask: View {
             TextField(NSLocalizedString("newTask", comment: ""), text: $newTask){ 
                 self.addNewTask()
             }
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(NSLocalizedString("add", comment: "")) { 
                 self.addNewTask()
             }

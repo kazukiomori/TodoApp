@@ -14,7 +14,7 @@ struct TaskToday: View {
                                            ascending: true)],
         predicate: NSPredicate(format:"time BETWEEN {%@ , %@}", Date.today as NSDate, Date.tomorrow as NSDate),
         animation: .default)
-     var todoList: FetchedResults<TodoEntity>
+    var todoList: FetchedResults<TodoEntity>
     
     // MARK: Body
     var body: some View {
@@ -24,7 +24,7 @@ struct TaskToday: View {
                 TodoDetailRow(todo: todo)
             }
         }.background(Color(UIColor.systemBackground))
-        .clipShape(RoundedCorners(tl: 40, tr: 40, bl: 0, br: 0))
+            .clipShape(RoundedCorners(tl: 40, tr: 40, bl: 0, br: 0))
     }
 }
 

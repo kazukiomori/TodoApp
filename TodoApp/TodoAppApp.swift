@@ -12,26 +12,26 @@ import UserNotifications
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    Messaging.messaging().delegate = self
-    UNUserNotificationCenter.current().delegate = self
-    let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-    UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: { _, _ in })
-      
-    application.registerForRemoteNotifications()
-      
-    Messaging.messaging().token { token, error in
-        if let error {
-            print("Error fetching FCM registration token: \(error)")
-        } else if let token {
-            print("FCM registration token: \(token)")
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: { _, _ in })
+        
+        application.registerForRemoteNotifications()
+        
+        Messaging.messaging().token { token, error in
+            if let error {
+                print("Error fetching FCM registration token: \(error)")
+            } else if let token {
+                print("FCM registration token: \(token)")
+            }
         }
+        
+        return true
     }
-
-    return true
-  }
     
     func application(_: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Oh no! Failed to register for remote notifications with error \(error)")
@@ -60,7 +60,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     ) {
         completionHandler([[.banner, .list, .sound]])
     }
-
+    
     func userNotificationCenter(
         _: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse,
@@ -81,7 +81,7 @@ struct TodoAppApp: App {
     let persistenceController = PersistenceController.shared
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

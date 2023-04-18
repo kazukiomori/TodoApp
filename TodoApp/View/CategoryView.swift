@@ -30,11 +30,16 @@ struct CategoryView: View {
                         .environment(\.managedObjectContext, self.viewContext)
                 }
             Text(category.toString())
+                .foregroundColor(.black)
+                .bold()
             Text("\(numberOfTasks)taskConut")
             Button(action: {
                 self.addNewTask = true
             }) {
-                Image(systemName: "plus")
+                HStack {
+                    Image(systemName: "plus")
+                    Text("addTask")
+                }
             }.sheet(isPresented: $addNewTask, onDismiss: self.update) {
                 NewTask(category: self.category.rawValue)
                     .environment(\.managedObjectContext, viewContext)
@@ -43,15 +48,15 @@ struct CategoryView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, minHeight: 150)
-            .foregroundColor(.white)
-            .background(category.color())
-            .cornerRadius(20)
-            .onTapGesture {
-                self.showList = true
-            }
-            .onAppear {
-                self.update()
-            }
+        .foregroundColor(.white)
+        .background(category.color())
+        .cornerRadius(20)
+        .onTapGesture {
+            self.showList = true
+        }
+        .onAppear {
+            self.update()
+        }
     }
 }
 

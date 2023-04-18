@@ -78,7 +78,7 @@ struct NewTask: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }){
                     Text("save")})
-                        .foregroundColor(.blue)
+                .foregroundColor(.blue)
         }
     }
 }

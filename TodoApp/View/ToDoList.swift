@@ -75,7 +75,7 @@ struct ToDoList_Previews: PreviewProvider {
             fetchRequest: NSFetchRequest(entityName: "TodoEntity"))
         try! container.persistentStoreCoordinator.execute(request,
                                                           with: context)
-
+        
         // データを追加
         TodoEntity.create(in: context,
                           category: .ImpUrg_1st, task: "炎上プロジェクト")
@@ -85,7 +85,7 @@ struct ToDoList_Previews: PreviewProvider {
                           category: .NImpUrg_3rd, task: "意味のない会議")
         TodoEntity.create(in: context,
                           category: .NImpNUrg_4th, task: "暇つぶし")
-
+        
         return ToDoList(category: .ImpUrg_1st, showList: .constant(true))
             .environment(\.managedObjectContext, container.viewContext)
     }

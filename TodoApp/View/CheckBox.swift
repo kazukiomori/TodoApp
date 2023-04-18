@@ -26,7 +26,7 @@ struct CheckBox<Label>: View where Label: View {
             Image(systemName: checked ? "checkmark.circle" : "circle")
                 .onTapGesture {
                     self.checked.toggle()
-            }
+                }
             label()
         }
     }
